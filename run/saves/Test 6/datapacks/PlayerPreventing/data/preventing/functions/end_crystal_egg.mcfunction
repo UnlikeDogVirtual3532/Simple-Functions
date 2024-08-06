@@ -1,0 +1,1 @@
+give @s axolotl_spawn_egg{EntityTag:{id:"minecraft:end_crystal",Health:1000,Attributes:[{Name:"generic.maxHealth",Base:1000},{Name:"generic.knockbackResistance",Base:1f}],HandDropChances:[2F,2F],HandItems:[{id:"minecraft:axolotl_spawn_egg",Count:64},{}],ActiveEffects:[{Id:18,Amplifier:0,Duration:2147483647},{Id:20,Amplifier:0,Duration:2147483647}]}}

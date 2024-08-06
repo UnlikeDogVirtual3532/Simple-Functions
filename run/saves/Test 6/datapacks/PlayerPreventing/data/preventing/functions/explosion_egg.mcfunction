@@ -1,0 +1,1 @@
+give @p mooshroom_spawn_egg{EntityTag:{id:"minecraft:creeper",powered:1,CustomName:"loser",CustomNameVisible:1,NoAI:1b,PersistenceRequired:0b,Glowing:1,CanPickUpLoot:0b,Attributes:[{Name:"generic.knockbackResistance",Base:0.2f}],Invulnerable:1,ExplosionRadius:20,Fuse:6,ignited:1}}

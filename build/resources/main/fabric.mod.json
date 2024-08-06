@@ -1,0 +1,27 @@
+{
+	"schemaVersion": 1,
+	"id": "simplefunctions",
+	"version": "1.0.0",
+	"name": "Simple Functions",
+	"description": "Makes an alternatives to /function(/call) being more user friendly",
+	"authors": [
+		"virtualengi"
+	],
+	"contact": {
+		"email": "virtualengi@outlook.com"
+	},
+	"license": "MIT",
+	"icon": "assets/playercommands/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"create.convoy.simplefunctions.Playercommands"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	}
+}

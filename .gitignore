@@ -1,24 +1,60 @@
-# Compiled class file
+### project
+
+### fabric
+
+# runtime
+run/
+
+### java
+
+# compiled classes
 *.class
 
-# Log file
+# log files
 *.log
+*.log.gz
 
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
-*.jar
-*.war
-*.nar
+# packaged files
 *.ear
-*.zip
-*.tar.gz
+*.jar
+*.nar
 *.rar
+*.tar.gz
+*.war
+*.zip
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-replay_pid*
+
+### gradle
+
+.gradle/
+
+# build
+**/build/
+!src/**/build/
+
+# wrapper
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+### jetbrains
+
+.idea/
+*.iml
+
+### eclipse
+
+.settings/
+
+# launch configurations
+*.launch
+
+# project description
+.project
+
+### vscode
+
+.vscode/
+.history/
+*.code-workspace

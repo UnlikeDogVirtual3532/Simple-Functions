@@ -26,22 +26,22 @@ public class Playercommands implements ModInitializer {
     @Override
     public void onInitialize() {
         CommandRegistrationCallback.EVENT.register((dispatcher, registryAcces, enviroment) -> {
-            registerCommands(dispatcher, false);
+            CommandRegistry.register(dispatcher, false);
         });
     }
 
-    private void registerCommands(CommandDispatcher<ServerCommandSource> dispatcher, boolean dedicated) {
-        dispatcher.register(CommandManager.literal("call")
-                .then(CommandManager.argument("function", CommandFunctionArgumentType.commandFunction()).suggests(SUGGESTION_PROVIDER)
-                .executes(context -> {
-                    Identifier function = CommandFunctionArgumentType.getIdentifiedFunctions(context, "function").getFirst();
-                    ServerCommandSource source = context.getSource();
+    // private void registerCommands(CommandDispatcher<ServerCommandSource> dispatcher, boolean dedicated) {
+    //     dispatcher.register(CommandManager.literal("call")
+    //             .then(CommandManager.argument("function", CommandFunctionArgumentType.commandFunction()).suggests(SUGGESTION_PROVIDER)
+    //             .executes(context -> {
+    //                 Identifier function = CommandFunctionArgumentType.getIdentifiedFunctions(context, "function").getFirst();
+    //                 ServerCommandSource source = context.getSource();
 
-                    String command = "/function " + function.toString();
-                    source.getServer().getCommandManager().executeWithPrefix(source, command);
-                    return Command.SINGLE_SUCCESS;
-                })
-                .then(CommandManager.argument("args", StringArgumentType.greedyString())
-                .executes(new CallCommand()))));
-    }
+    //                 String command = "/function " + function.toString();
+    //                 source.getServer().getCommandManager().executeWithPrefix(source, command);
+    //                 return Command.SINGLE_SUCCESS;
+    //             })
+    //             .then(CommandManager.argument("args", StringArgumentType.greedyString())
+    //             .executes(new CallCommand()))));
+    // }
 }

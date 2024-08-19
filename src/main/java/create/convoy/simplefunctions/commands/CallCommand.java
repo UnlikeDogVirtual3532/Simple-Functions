@@ -10,6 +10,7 @@ import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.util.Identifier;
 
 public class CallCommand implements Command<ServerCommandSource> {
+
     @Override
     public int run(CommandContext<ServerCommandSource> context) throws CommandSyntaxException {
         Identifier function = CommandFunctionArgumentType.getIdentifiedFunctions(context, "function").getFirst();

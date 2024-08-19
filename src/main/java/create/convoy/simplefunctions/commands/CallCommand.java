@@ -1,5 +1,7 @@
 package create.convoy.simplefunctions.commands;
 
+import java.util.Collection;
+
 import com.mojang.brigadier.Command;
 import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
@@ -7,13 +9,15 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 
 import net.minecraft.command.argument.CommandFunctionArgumentType;
 import net.minecraft.server.command.ServerCommandSource;
+import net.minecraft.server.function.CommandFunction;
 import net.minecraft.util.Identifier;
 
 public class CallCommand implements Command<ServerCommandSource> {
 
     @Override
     public int run(CommandContext<ServerCommandSource> context) throws CommandSyntaxException {
-        Identifier function = CommandFunctionArgumentType.getIdentifiedFunctions(context, "function").getFirst();
+        Identifier function = CommandFunctionArgumentType.getFunctionOrTag(context, "function").getFirst();
+
         String args = StringArgumentType.getString(context, "args");
         ServerCommandSource source = context.getSource();
 

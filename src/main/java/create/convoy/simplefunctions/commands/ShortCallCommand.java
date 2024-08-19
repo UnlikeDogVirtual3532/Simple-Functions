@@ -13,7 +13,7 @@ public class ShortCallCommand implements Command<ServerCommandSource> {
 
     @Override
     public int run(CommandContext<ServerCommandSource> context) throws CommandSyntaxException {
-        Identifier function = CommandFunctionArgumentType.getIdentifiedFunctions(context, "function").getFirst();
+        Identifier function = CommandFunctionArgumentType.getFunctionOrTag(context, "function").getFirst();
         ServerCommandSource source = context.getSource();
 
         String command = "/function " + function.toString();

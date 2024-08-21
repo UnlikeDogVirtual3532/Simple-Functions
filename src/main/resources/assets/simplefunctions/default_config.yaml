@@ -1,1 +1,7 @@
-callCommandIdentifier: call
+# The identifier used for the command to get called
+# e.g. /COMMANDIDENTIFIER mycommands:command players @a text "this is a function", default is "call"
+commandIdentifier: call
+
+# The string placed infront of the compiled function in the code, default is "/function"
+# e.g. COMMANDIDENTIFIER mycommands:command {"players": "@a", "text": "this is a function"}
+commandInvokePrefix: /function

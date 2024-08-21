@@ -11,7 +11,7 @@ import net.minecraft.server.command.ServerCommandSource;
 
 public class CommandRegistry {
     public static void register(CommandDispatcher<ServerCommandSource> dispatcher) {
-        dispatcher.register(CommandManager.literal((String)Playercommands.configMap.get("callCommandIdentifier"))
+        dispatcher.register(CommandManager.literal((String)Playercommands.configMap.get("commandIdentifier"))
                 .then(CommandManager.argument("function", CommandFunctionArgumentType.commandFunction()).suggests(Playercommands.SUGGESTION_PROVIDER)
                 .executes(new ShortCallCommand())
                 .then(CommandManager.argument("args", StringArgumentType.greedyString())

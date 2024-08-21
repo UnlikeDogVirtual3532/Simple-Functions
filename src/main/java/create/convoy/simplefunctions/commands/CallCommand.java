@@ -5,6 +5,7 @@ import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 
+import create.convoy.simplefunctions.Playercommands;
 import net.minecraft.command.argument.CommandFunctionArgumentType;
 import net.minecraft.server.command.ServerCommandSource;
 import net.minecraft.util.Identifier;
@@ -39,7 +40,7 @@ public class CallCommand implements Command<ServerCommandSource> {
     }
 
     private void exec(ServerCommandSource source, Identifier function, String args) {
-        String command = "/function " + function.toString() + " " + args;
+        String command = Playercommands.configMap.get("commandInvokePrefix") + " " + function.toString() + " " + args;
         source.getServer().getCommandManager().executeWithPrefix(source, command);
     }
 }
